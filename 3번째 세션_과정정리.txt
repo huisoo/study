@@ -1,0 +1,35 @@
+* 과제 피드백 *
+
+5주 간단 정리
+1. Spring 개발 환경 설정
+2. Front End 기본 ( d3.js )
+3. Back End 기본 ( RestController를 활용한 데이터 처리 )
+4. 2,3을 포함한 간단한 차트 구현
+
+
++++ 추가 설명 +++
+1. 오픈소스 ( 차트, 그리드 )
+    - jqgrid, datatables, agegrid
+2. 크로스 브라우징, 크로스 도메인 이슈
+    - 크로스 브라우징 : https://asfirstalways.tistory.com/237
+    - 크로스 도메인: https://nesoy.github.io/articles/2017-06/Cross-Domain
+        해결 : 1) https://jjshun.tistory.com/23
+               2) httpclient
+3. SQL --> 동적쿼리(MyBatis), http://www.mybatis.org/mybatis-3/ko/dynamic-sql.html
+       --> 코드 VS SQL, https://brownbears.tistory.com/150
+
+4. 목표선정! 공부하자!
+https://evan-moon.github.io/2019/08/26/how-does-developer-study/
+
+5.정리합시다.!! 어떤 방법이든 정리하는 습관을 지닙시다.
+https://waspro.tistory.com/m
+
+
+
+
+
+
+
+
+
+
