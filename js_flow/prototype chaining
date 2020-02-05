@@ -1,0 +1,78 @@
+##이론
+
+ProtoType의 체인처럼 엮여있다.
+메서드를 사용할 때 String, number 등 에 알아서 prototype으로 변경된다.
+
+        Object ------> Object.prototype
+            |             /
+Array --> Array.prototype
+  |      /
+[1,2,3]
+
+Object.prototype ( 모든데이터 타입에 대해서 자바스크립트 전체 통괄하는 공통 메소드 )
+-- hasOwnProperty()
+-- toString();
+-- valueOf()
+-- isPrototypeOf()
+
+
+Object. 메소드가 자꾸 존재한다.
+객체의 prototype에 객체를 위한 메소드를 정의 할 수 없다 : 모든 데이터 타입에 적용 되기 때문에
+객체를 위한 메소드가 존재한다...
+- assign()
+- freeze()
+- create()
+- values()
+- keys()
+
+
+사용 예)
+var arr = [1, 2, 3];
+console.log(arr.toString());  출력 1,2,3
+
+직접 toString을 정의
+var arr = [1,2,3];
+arr.toString = function(){
+  return this.join('_');
+}
+
+console.log(arr.toString());  1_2_3
+console.log(arr.__proto__.toString.call(arr)); 1,2,3
+console.log(arr.__proto__.__proto__.toString.call(arr)); [Ojbect Array]
+
+똑같이 나오게 하고 싶으면
+var arr = [1,2,3];
+Array.prototype.toString = function(){
+  return '[' + this.join(', ') + ']';
+}
+
+모두 [1,2,3] 출력...
+
+
+
+var obj = {
+  a: 1,
+  b: {
+      c:'c'
+      },
+  toString: function(){
+        var res = [];
+        for(var key in this){
+           res.push(key + ": " + this[key].toString());
+        }
+        return '{' + res.join(', ') + '}';
+      }
+};
+
+--> toString을 ###prototype로 변경 후 좋은 출력이 가능해진다.
+
+Object.prototype.toString = function(){
+ var res = [];
+ for(var key in this){
+  res.push(key + ": " + this[key].toString());
+  }
+  return '{' + res.join(', ') + '}';
+  
+ 
+}
+console.log(obj.toString()); { a:1, b: {c:c}}
