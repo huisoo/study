@@ -1,0 +1,24 @@
+                    person  ----  getName(), getAge()
+                        |            /
+                        |           /
+                        |          /
+                        |         /
+Employee ----------    getPosition()
+        |             /
+        |           /
+        |          /
+        |        /
+        gomu{
+          name : 'gomu',
+          age: 30,
+          position:'CEO'
+        }
+
+
+
+각 꼭지점을 연결 한다 Employee.prototype = new Person();
+Employee.prototype.constructor = Employee
+
+
+
+ 
