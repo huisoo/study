@@ -1,0 +1,15 @@
+function person(n,a){
+  this.name = n;
+  this.age = a;
+}
+
+var gomu = new Person('고무곰', 30);
+var gomuClone1 = new gomu.__proto__.constructor('고무곰_클론1', 10);
+var gomuClone2 = new gomu.constructor('고무곰_클론2', 25);
+var gomuProto = Object.getPrototyeOf(gomu);
+
+
+[CONSTRUCTOR].prototype
+[instance].__proto__
+[instance]
+Object.getPrototypeOf([instance])
