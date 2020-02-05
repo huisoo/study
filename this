@@ -1,0 +1,24 @@
+a.call(b, 1, 2, 3);
+a.apply(b, [1,2,3]);
+var c = a.bind(b);
+c(1,2,3);
+
+var d = a.bind(b,1,2);
+d(3);
+-------------------------------------------
+
+콜백 함수
+var callback = function(){
+  console.dir(this);  --> window
+
+};
+
+var obj = {
+  a:1,
+  b: function(cb){
+    cb();
+  }
+};
+obj.b(callback);
+
+--------------------------------------------------
