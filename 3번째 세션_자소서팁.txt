@@ -1,6 +1,10 @@
 [ 자소서 TIP ]
 1. 선행 : 합격 데이터(리스트 작성), 탈락이유 파악
+   ** 탈락케이스 : 자소서 COPY
 2. 채용공고를 주시하자!
    ** 꿀팁 : 경력직 공고를 확인하자!
+      http://apply.lg.com/app/job/RetrieveJobNotices.rpi?careerCode=B
 3. 합격자소서에 답이 있다!  ********
    ** default. 신년사, DART
+   ** 신년사 : https://www.yna.co.kr/view/AKR20200209051300003?input=1195m
+   ** DART(중견) : 아이디스
